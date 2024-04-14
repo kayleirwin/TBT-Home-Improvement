@@ -1,0 +1,245 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+	--blue:#262262;
+}
+
+html{
+	
+}
+
+body{
+	width: 375px;
+	margin: 0 auto;
+}
+header h1{
+	font-size: 1.75rem;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	bottom: 115px;
+	font-weight: bold;
+	color: #F3F5EE;
+	z-index: 1;
+	text-align: center;
+	background-color: rgba(38, 34, 98, 0.6);
+}
+.hero-img{
+	z-index: 0;
+	opacity: 0.8;
+}
+h2{
+	text-align: center;
+	line-height: 50px;
+	font-size: 1.5rem;
+	margin-top: -40px;
+}
+main p{
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-bottom: 35px;
+	text-align: justify;
+}
+.main-img{
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+.estimate{
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding: 10px 20px;
+	border: 2px solid var(--blue);
+	border-radius: 3px;
+	width: 30%;
+	box-shadow: 1px 1px 2px var(--blue);
+	transition: 0.4s;
+}
+.estimate:hover{
+	background-color: var(--blue);
+	color: #ffffff;
+}
+
+#services{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1r;
+	justify-content: center;
+}
+#services h2{
+	text-decoration: underline;
+	margin-bottom: 25px;
+}
+figcaption{
+	background-color: rgba(38, 34, 98, 0.6);
+	position: relative;
+	bottom: 41px;
+	padding: 10px;
+	text-align: center;
+}
+figcaption a{
+	color: #ffffff;
+	font-size: 1.2rem;
+}
+figcaption:hover{
+	text-decoration: underline;
+	color: #ffffff;
+}
+#estimate{
+	text-align: center;
+	background-color: rgba(38, 34, 98, 0.6);
+	padding: 50px;
+}
+#projects h2{
+	margin-top: 35px;
+	text-decoration: underline;
+}
+.project-img{
+	overflow: auto;
+	white-space: nowrap;
+	padding: 10px;
+}
+.project-img::-webkit-scrollbar{
+	display: none;
+}
+
+
+/* Hamburger Menu */
+
+.logo{
+	position: absolute;
+	top: 0;
+	height: 20px;
+}
+li{
+	display: flex;
+	justify-content: center;
+	font-size: 1.1rem;
+	padding: 5px 5px;
+}
+li:hover{
+	background-color: #262262;
+	color: #ffffff;
+}
+li:hover a{
+	background-color: #262262;
+	color: #ffffff;
+}
+li:nth-of-type(1):hover a{
+	background-color: #ffffff;
+}
+li:nth-of-type(1):hover{
+	background-color: beige;
+}
+.logo:hover{
+	background-color:#ffffff ;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+ul a:hover{
+	color: #ffffff;
+	background-color: #262262;
+}
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+	background-color: beige;
+	z-index: 1;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 5px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: black;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
