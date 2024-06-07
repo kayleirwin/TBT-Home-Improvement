@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBT Home Improvement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/tbtlogo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="dropdown">
+            <label for="dropdown"><span></span></label>
+                <ul>
+                    <li><a class="logo" href="#"><img src="images/tbtlogo.svg" alt="logo" height="65" width="80"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </nav>
+        <img class="hero-img" src="images/stockcabinets.jpg" alt="temp stock cabinets" width="375">
+        <h1>Our </br>Services</h1>
+    </header>
+    <main>
+        <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('interior')"> Interior</button>
+        <button class="btn" onclick="filterSelection('exterior')"> Exterior</button>
+        <button class="btn" onclick="filterSelection('consulting')"> Consulting</button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+    <div class="row">
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/Backflow.jpg" alt="Backflow Preventer" style="width:100%">
+            <h4>Backflows</h4>
+            </div>
+        </div>
+        <div class="column interior">
+            <div class="content">
+            <img src="images/bathroom.jpg" alt="Bathrooms" style="width:100%">
+            <h4>Bathrooms</h4>
+            </div>
+        </div>
+        <div class="column consulting">
+            <div class="content">
+            <img src="images/consultingstock.jpg" alt="consulting"  style="width:100%">
+            <h4>Consulting</h4>
+            </div>
+        </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/decking.jpg" alt="Decking"  style="width:100%">
+            <h4>Decking</h4>
+            </div>
+        </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/disaster.jpg" alt="Disaster Relief"  style="width:100%">
+            <h4>Disaster Relief</h4>
+            </div>
+        </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/fencing.jpg" alt="Fencing" style="width:100%">
+            <h4>Fencing</h4>
+            </div>
+        </div>
+        <div class="column interior">
+            <div class="content">
+            <img src="images/finishing.jpg" alt="Finishing" style="width:100%">
+            <h4>Finishing</h4>
+            </div>
+        </div>
+        <div class="column interior">
+            <div class="content">
+            <img src="images/flooring.jpg" alt="Flooring" style="width:100%">
+            <h4>Flooring</h4>
+        </div>
+        </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/framing.jpg" alt="Framing" style="width:100%">
+            <h4>Framing</h4>
+        </div>
+        </div>
+        <div class="column interior">
+                <div class="content">
+                <img src="images/kitchen.jpg" alt="Kitchens" style="width:100%">
+                <h4>Kitchens</h4>
+        </div>
+    </div>
+        <div class="column interior">
+                    <div class="content">
+                    <img src="images/paint.jpg" alt="Paint" style="width:100%">
+                    <h4>Paint</h4>
+        </div>
+    </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/patio.jpg" alt="Patio" style="width:100%">
+            <h4>Patio</h4>
+        </div>
+    </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/siding.jpg" alt="Siding" style="width:100%">
+            <h4>Siding</h4>
+        </div>
+    </div>
+        <div class="column exterior">
+                <div class="content">
+                <img src="images/stump.jpg" alt="Stump Removal" style="width:100%">
+                <h4>Stump Removal</h4>
+        </div>
+    </div>
+        <div class="column exterior">
+            <div class="content">
+            <img src="images/treeclearing.jpg" alt="Tree Clearing" style="width:100%">
+            <h4>Tree Clearing</h4>
+            </div>
+        </div>
+        </div>
+        <!-- END GRID -->
+    </div>
+        <script>
+                        filterSelection("all") // Execute the function and show all columns
+            function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+            }
+
+            // Show filtered elements
+            function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+                }
+            }
+            }
+
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+            }
+        </script>
+        <section id="estimate">
+            <a href="#">Estimating Tool</a>
+        </section>
+    </main>
+    <footer>
+        <section id="socials">
+            <a href="#" class="top">Top</a>
+            <h3>See more from us here!</h3>
+            
+                <ul>
+                    <li><a href="#"><img src="images/Screenshot 2024-05-01 105030.jpg" alt="tiktok"></a></li>
+                    <li><a href="#"><img src="images/faceboook.jpg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
+                    
+                    <li><a href="#"><img src="images/linkedin.jpg" alt="twitter"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" alt="twitter"></a></li>
+                </ul>
+                <a href="#"><img class="flogo" src="images/LOGO 2.jpg" alt="logo" height="60" width="95"></a>
+                <p>&copy; 2024 TBT Home Improvement</p>
+        </section>
+    </footer>
+</body>

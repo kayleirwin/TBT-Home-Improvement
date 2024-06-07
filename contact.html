@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBT Home Improvement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/tbtlogo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="dropdown">
+            <label for="dropdown"><span></span></label>
+                <ul>
+                    <li><a class="logo" href="#"><img src="images/tbtlogo.svg" alt="logo" height="65" width="80"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>Contact Us</h2>
+            <p>Need to get in touch? Fill out the form with your inquiry. We will be in touch soon!</p>
+        </aside>
+        <section id="form">
+            <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="full-name" id="full-name" required>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" name="phone-number" id="phone-number" required>
+                    <fieldset>
+                        <legend>Preferred Method of Contact</span></legend>
+                        <div class="input">      
+                        <input type="radio" name="contact-pref" id="email-pref" value="prefer-email" required checked>
+                        <label for="email-pref">Email</label>
+                        </div>   
+                        <div class="input">    
+                        <input type="radio" name="contact-pref" id="phone-pref" value="prefer-phone">
+                        <label for="phone-pref">Phone</label>
+                        </div>        
+                    </fieldset>
+                    <label for="message">What can we do for you?</label>
+                    <textarea name="message" id="message"></textarea>
+                <input type="submit" name="mySubmit" id="mySubmit" value="Submit Form">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section id="socials">
+            <a href="#" class="top">Top</a>
+            <h3>See more from us here!</h3>
+            
+                <ul>
+                    <li><a href="#"><img src="images/Screenshot 2024-05-01 105030.jpg" alt="tiktok"></a></li>
+                    <li><a href="#"><img src="images/faceboook.jpg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
+                    
+                    <li><a href="#"><img src="images/linkedin.jpg" alt="twitter"></a></li>
+                    <li><a href="#"><img src="images/twitter.png" alt="twitter"></a></li>
+                </ul>
+                <a href="#"><img class="flogo" src="images/LOGO 2.jpg" alt="logo" height="60" width="95"></a>
+                <p>&copy; 2024 TBT Home Improvement</p>
+        </section>
+    </footer>
+</body>
